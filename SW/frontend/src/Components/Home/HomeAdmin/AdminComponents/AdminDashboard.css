@@ -1,0 +1,254 @@
+/* Global Styles */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents page-level scrolling */
+}
+
+.admin-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  transform-origin: top center;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-container button {
+  margin-left: 5px;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+}
+
+/* Table Styles */
+.user-list {
+  width: 100%;
+  max-height: 400px;
+  margin-top: 130px ;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  
+}
+
+
+.user-list table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Ensures table cells maintain structure */
+}
+
+.user-list button {
+  margin-left: 2px;
+}
+
+.user-list th, .user-list td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem; /* Base font size */
+}
+
+.user-list thead {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Sticky header for easy navigation */
+  z-index: 1;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider styles */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px; /* Rounded corners for the slider */
+}
+
+/* When the switch is checked */
+input:checked + .slider {
+  background-color: #2196F3; /* Change color when checked */
+}
+
+/* Before the slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%; /* Round the slider knob */
+}
+
+/* When the switch is checked */
+input:checked + .slider:before {
+  transform: translateX(26px); /* Move the knob */
+}
+/* For larger screens */
+@media screen and (max-width: 1200px) {
+  .admin-container {
+    transform: scale(0.9);
+  }
+  .user-list th, .user-list td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .admin-container {
+    transform: scale(0.8);
+  }
+  .user-list th, .user-list td {
+    font-size: 0.85rem;
+    padding: 7px;
+  }
+}
+
+/* Mobile Styles - Scrollable, Zoomable Table */
+@media screen and (max-width: 768px) {
+  /* Enable pinch-to-zoom for mobile users */
+  body {
+    overflow: auto; /* Allow page-level scrolling */
+    -ms-touch-action: pan-x pan-y;
+    touch-action: pan-x pan-y;
+  }
+
+  .admin-container {
+    transform: none; /* Don't scale down, just allow zooming */
+    width: 100%;
+    max-width: 100%; /* Expand container to full width */
+  }
+
+  .user-list {
+    overflow-x: scroll; /* Horizontal scrolling enabled */
+    overflow-y: scroll; /* Vertical scrolling enabled */
+    width: 100%;
+  }
+
+  .user-list table {
+    min-width: 600px; /* Ensures the table remains scrollable */
+    table-layout: auto; /* Allow columns to adjust */
+  }
+
+  .user-list th, .user-list td {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+}
+
+/* Very Small Mobile Screens */
+@media screen and (max-width: 480px) {
+  /* Allow zooming */
+  body {
+    overflow: auto; /* Enable page-level scrolling */
+  }
+
+  .admin-container {
+    transform: none;
+    max-width: 100%;
+    padding: 10px; /* Reduce padding on small screens */
+  }
+
+  .user-list {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 100%;
+  }
+
+  .user-list table {
+    min-width: 600px; /* Allow horizontal scroll */
+  }
+
+  .user-list th, .user-list td {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+}
+
+.login-history {
+  margin-top: 120px;
+  padding: 20px;
+}
+
+.login-history h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.login-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.login-history-table th, .login-history-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.login-history-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+.login-history-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.login-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-history-table th, .login-history-table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-history-table th, .login-history-table td {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+}

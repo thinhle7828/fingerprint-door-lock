@@ -1,0 +1,76 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #996e00;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.lock-container {
+    background-color: #aaaaaa;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 150px auto; /* Thêm margin 50px từ trên xuống */
+    width: 100%; /* Chiếm toàn bộ chiều ngang */
+    max-width: 500px; /* Giới hạn chiều rộng tối đa */
+ 
+}
+
+/* Icon ổ khóa */
+.lock-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #bbb3af; /* Màu nâu đậm */
+}
+
+/* Trạng thái của khóa */
+.lock-status {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Nút unlock */
+.unlock-button {
+    background-color: #0051ff; /* Màu cam đất */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: calc(50% - 10px); 
+}
+
+/* Nút lock */
+.lock-button {
+    background-color: #6B705C;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: calc(50% - 10px);
+}
+
+
+@media (max-width: 600px) {
+    .lock-icon {
+        font-size: 50px; 
+    }
+    
+    .lock-status {
+        font-size: 20px; /* Thu nhỏ kích thước văn bản */
+    }
+    
+    .unlock-button, .lock-button {
+        font-size: 16px; /* Thu nhỏ nút */
+        padding: 8px 16px; /* Điều chỉnh khoảng cách bên trong nút */
+        width: 100%; /* Nút chiếm toàn bộ chiều rộng màn hình nhỏ */
+        margin-bottom: 10px; /* Khoảng cách giữa các nút trên màn hình nhỏ */
+    }
+}

@@ -1,0 +1,67 @@
+/* home.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+    background-color: #6ab5f3;
+    height: 100vh; 
+    width: 100%;
+    box-sizing: border-box; 
+    max-width: 100%; 
+    margin: 0 auto; 
+  }
+  
+  .home-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+  
+  .home-userlist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    overflow-y: auto; 
+    flex-grow: 1; 
+  }
+
+  .imageContainer {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto; 
+    max-height: 40vh; 
+    object-fit: cover; 
+    border-radius: 10px; 
+  }
+  
+  h3, p {
+    text-align: center; 
+    margin: 10px 0;
+    width: 100%; 
+    padding: 0 5px; 
+    box-sizing: border-box; 
+  }
+  
+  @media (max-width: 600px) {
+    .home-title {
+      font-size: 1.5rem;
+    }
+
+  }
+  

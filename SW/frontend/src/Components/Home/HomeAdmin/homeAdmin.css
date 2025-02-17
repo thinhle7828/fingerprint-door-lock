@@ -1,0 +1,51 @@
+.admin-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
+  .admin-header h1 {
+    font-size: 2rem;
+  }
+  
+  nav button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  nav button.active {
+    background-color: #333;
+    color: white;
+  }
+  
+  .admin-content {
+    margin-top: 20px;
+  }
+  
+  .user-list table, .login-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .user-list th, .login-history th, .user-list td, .login-history td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .login-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
