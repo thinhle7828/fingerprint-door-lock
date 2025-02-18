@@ -1,1 +1,5 @@
-Trước khi nạp code vào ESP32, bạn cần nhập thông tin WiFi và Firebase để thiết bị có thể kết nối và hoạt động đúng cách.
+Hệ thống có các chức năng như:
++ Mở khóa bằng vân tay, bàn phím(Mật khẩu), trang web.
++ Thêm, xóa, lưu trữ các dữ liệu, lịch sử của người dùng
++ Gửi cảnh báo về email.
++ Chụp hình và hiển thị cảnh báo đăng nhập qua web.
